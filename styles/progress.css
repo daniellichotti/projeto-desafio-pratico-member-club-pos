@@ -2,7 +2,7 @@
   width: 351px;
   height: 88px;
 
-
+  grid-area: D;
 
   border: 1px solid var(--gray-300);
 
