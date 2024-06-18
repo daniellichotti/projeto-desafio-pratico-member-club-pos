@@ -13,7 +13,7 @@
         {"date": "23/10/2023", "time": "15:00"}
       ],
       "loyaltyCard": {
-        "totalCuts": 6,
+        "totalCuts": 10,
         "cutsNeeded": 10,
         "cutsRemaining": 4
       }

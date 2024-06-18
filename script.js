@@ -19,7 +19,7 @@ async function fetchClientsWithId() {
     return;
   }
 
-  const response = fetch(`http://localhost:8000/clients/${idNumerico}`)
+  const response = fetch(`http://localhost:8000/clients/${id}`)
     .then((response) => {
       if (!response.ok) {
         alert('Cliente não encontrado.');
@@ -28,6 +28,16 @@ async function fetchClientsWithId() {
       return response.json();
     })
     .then((data) => {
+
+    var totalCuts = data.loyaltyCard.totalCuts;
+
+    // Verifica se o totalCuts é igual a 10 para mostrar o modal
+    if (totalCuts === 10) {
+      var modal = document.getElementById('modal');
+      modal.style.display = 'block'; // Exibe o modal
+
+      // Você pode adicionar aqui mais lógica para atualizar o modal com informações dinâmicas se necessário
+    }
 
     var name = data.name
     var elemento = document.getElementById('nameTitle');
@@ -142,11 +152,6 @@ async function fetchClientsWithId() {
     for (var i = 0; i < appointmentHistory.length; i++) {
         createHistoryBlock(appointmentHistory[i].date, appointmentHistory[i].time);
     }
-
-    console.log(appointmentHistory);
-    console.log(appointmentHistory.length);
-    console.log(appointmentHistory[0].date);
-    console.log(appointmentHistory[0].time);
   });
 }
 
@@ -154,3 +159,4 @@ function removerDivsAnteriores() {
   const divsToRemove = document.querySelectorAll('.check-box');
   divsToRemove.forEach(div => div.remove());
 }
+
