@@ -1,8 +1,33 @@
 async function fetchClientsWithId() {
+
   var id = document.getElementById('campoIdUsuario').value;
-  const response = fetch(`http://localhost:8000/clients/${id}`)
-  .then((response) => response.json())
-  .then((data) => {
+
+  if (id === '') {
+    alert('Por favor, insira um ID válido.');
+    return;
+  }
+
+  if (!/^\d{3}-\d{3}-\d{3}-\d{3}$/.test(id)) {
+    alert('O ID deve estar no formato XXX-XXX-XXX-XXX, onde X é um dígito.');
+    return;
+  }
+
+  var idNumerico = id.replace(/-/g, '');
+
+  if (!/^\d{12}$/.test(idNumerico)) {
+    alert('O ID deve conter apenas dígitos numéricos após remover os hífens.');
+    return;
+  }
+
+  const response = fetch(`http://localhost:8000/clients/${idNumerico}`)
+    .then((response) => {
+      if (!response.ok) {
+        alert('Cliente não encontrado.');
+        throw new Error('Cliente não encontrado.');
+      }
+      return response.json();
+    })
+    .then((data) => {
 
     var name = data.name
     var elemento = document.getElementById('nameTitle');
