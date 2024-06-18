@@ -1,0 +1,154 @@
+.card{
+  width: 351px;
+  height: 239px;
+
+
+  border: 1px solid var(--gray-300);
+  background-color: var(--gray-100);
+  border-radius: 16px;
+  padding: 20px;
+
+  color: var(--gray-500);
+
+  p{
+    font: var(--text-xs);
+  }
+
+  .card-info-wrapper {
+    width: 311px;
+    height: 55px;
+
+    margin-top: 4px;
+
+    align-items: start;
+    flex-direction: row;
+    gap: 1rem;
+
+    span {
+      width: 123px;
+      height: 24px;
+      font: var(--subtitle-sm);
+      background-color: var(--gray-300);
+      border-radius: 999px;
+      
+      align-items: center;
+    }
+
+  }
+
+  .card-info {
+    width: 172px;
+    height: 55px;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    h2 {
+      font: var(--subtitle-sm);
+    }
+  }
+
+  .card-icons-wrapper {
+    width: 312px;
+    height: 120px;  
+
+    margin-top: 20px;
+
+
+    flex-wrap: wrap;
+    align-items: start;
+    flex-direction: row;
+    gap: 8px;
+
+    .check-box {
+      width: 56px;
+      height: 56px;
+
+      border-radius: 12.57px;
+      background-color: var(--gray-200);
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    img{
+      width: 40px;
+      height: 40px;
+    }
+
+    :nth-child(10) {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media (width >= 80em){
+  .card{
+    width: 568px;
+    height: 333px;
+
+    padding: 32px;
+
+
+    .card-info-wrapper {
+      width: 480px;
+      height: 41px;
+
+      gap: 49;
+      justify-content: space-between;
+
+      .card-info {
+        width: 306px;
+        height: 41px;
+      }
+    }
+
+    .card-icons-wrapper {
+      width: 504px;
+      height: 192px;  
+  
+      margin-top: 32px;
+  
+  
+      flex-wrap: wrap;
+      align-items: start;
+      flex-direction: row;
+      gap: 16px;
+
+      span {
+        width: 149px;
+        height: 24px;
+
+        font: var(--subtitle-md);
+      }
+  
+      .check-box {
+        width: 88px;
+        height: 88px;
+  
+        border-radius: 12.57px;
+        background-color: var(--gray-200);
+  
+        align-items: center;
+        justify-content: center;
+      }
+      span {
+        width: 387px;
+        height: 32px;
+      }
+      img{
+        width: 64px;
+        height: 64px;
+      }
+      :nth-child(10) {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

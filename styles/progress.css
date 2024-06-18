@@ -1,0 +1,178 @@
+.progress {
+  width: 351px;
+  height: 88px;
+
+
+
+  border: 1px solid var(--gray-300);
+
+  background-color: var(--gray-100);
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  padding: 16px 20px;
+
+  .haircut-couter {
+    width: 231px;
+    height: 46px;
+
+    margin-top: 5px;
+    gap: 4px;
+
+    .haircut-number{
+      width: 231px;
+      height: 25px;
+
+      gap: .2rem;
+
+      align-items: baseline;
+      flex-direction: row;
+      justify-content: flex-start;
+      
+      p {
+        font: var(--title-sm);
+        color: var(--gray-600);
+      }
+
+      p + p {
+        font: var(--text-sm);
+        color: var(--gray-500);
+      }
+    } 
+
+    .haircut-graph {
+      width: 231px;
+      height: 17px;
+      
+
+      flex-direction: row;
+      gap: 12px;
+      
+
+      .bar-graph {
+        width: 182px;
+        height: 8px;
+
+        position: relative;
+
+        border-radius: 9999px;
+
+        background-color: var(--gray-300);
+
+        .completed-bar {
+          width: 0%;
+          height: 100%;
+  
+          border-radius: 9999px;
+  
+          background-image: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+        }
+      }
+
+      
+
+      .cutsRemaining-of-cutsNeeded {
+        display: flex;
+        flex-direction: row;
+        gap: .2rem
+      }
+
+      p {
+        font: var(--text-xs);
+        color: var(--gray-500);
+      }
+    }
+
+  }
+
+  .haircut-gift {
+    width: 56px;
+    height: 56px;
+
+    background-color: var(--gray-200);
+    border-radius: 777px;
+
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (width >= 80em){
+  .progress {
+    width: 568px;
+    height: 117px;
+
+    gap: 32px;
+
+    padding: 32px;
+    
+
+    .haircut-couter {
+      width: 400px;
+      height: 63px;
+
+      align-items: start;
+      justify-content: start;
+      gap: 12px;
+
+      margin-top: 0px;
+
+
+      .haircut-number{
+        width: 136px;
+        height: 34px;
+
+        align-items:end;
+        justify-content: flex-start;
+
+
+        p {
+          font: var(--title-md);
+          color: var(--gray-600);
+        }
+
+        p + p {
+          font: var(--text-md);
+          color: var(--gray-500);
+        }
+      }
+      .haircut-graph {
+        width: 400px;
+        height: 17px;
+  
+        .bar-graph {
+          width: 351px;
+          height: 8px;
+        }
+
+        p{
+          font: var(--text-xs);
+        }
+      }
+    }
+    
+
+    .haircut-gift {
+      width: 72px;
+      height: 72px;
+
+      border-radius: 999px;
+
+      img {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+}
+
+
+

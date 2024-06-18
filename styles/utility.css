@@ -1,0 +1,44 @@
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  margin-inline: auto;
+}
+
+
+.desktop-only {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gap-0\.5{
+  gap: 0.5rem;
+}
+
+@media (width >= 80em){
+  
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .main-wrapper {
+    width: 912px;
+    height: 466px;
+    
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+  }
+}

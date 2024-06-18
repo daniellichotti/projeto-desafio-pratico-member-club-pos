@@ -1,0 +1,52 @@
+.user {
+  width: 351px;
+  height: 90px;
+
+  grid-area: A;
+
+  border: 1px solid var(--gray-300);
+  
+  background-color: var(--gray-100);
+  border-radius: 16px;
+  padding: 1rem;
+  
+  flex-direction: row;
+  gap: 16px;
+  align-items: start;
+  justify-content: flex-start;
+
+  img {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 10px;
+  }
+
+  .user-info {
+    width: 140px;
+    height: 46px;
+
+    white-space: nowrap;
+
+    h1 {
+    font: var(--title-sm);
+    color: var(--gray-600);
+    }
+
+    p {
+      color: var(--gray-500);
+      font: var(--text-xs);
+    }
+  }
+}
+
+@media (width >= 80em){
+  .user {
+    width: 320px;
+    height: 90px;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+

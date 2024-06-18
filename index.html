@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memeber Club</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles/index.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="flex">
+    <img src="assets/Logo.png" alt="logo do member club">
+    <div class="input-wrapper">
+      <input type="text" placeholder="ID do cartão" id="campoIdUsuario">
+      <button onclick="fetchClientsWithId()">
+        <img src="assets/icons/ArrowElbowDownLeft-disabled.svg" alt="icone para pesquisar">
+      </button>
+    </div>
+  </header>
+
+  <main class="flex">
+
+    <div class="sections flex">
+
+      <section class="user flex" id="user">
+            <img src="https://picsum.photos/200/300" alt="">
+            <div class="user-info">
+              <h1 id="nameTitle">Natália Miranda</h1>
+              <p>Cliente desde <span id="clientSince">18/09/2023</span></p>
+            </div>
+      </section>
+
+      <section class="card" id="card">
+        <div class="card-info-wrapper flex">
+          <div class="card-info flex">
+            <h2>Cartão Fidelidade</h2>
+            <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
+          </div>
+          <span class="flex" id="idNumber">ID: 124-537-835-230</span>
+        </div>
+
+        <div class="card-icons-wrapper flex"></div>
+      </section>
+
+      <section class="progress" id="progress">
+        <div class="haircut-couter flex">
+          <div class="haircut-number flex">
+            <p id="totalCuts">0</p>
+            <p>cortes restantes</p>
+          </div>
+          <div class="haircut-graph flex">
+            <div class="bar-graph">
+              <div class="completed-bar"></div>
+            </div>
+            <div class="cutsRemaining-of-cutsNeeded">
+              <p id="cutsRemaining">0</p>
+              <p>de</p>
+              <p id="cutsNeeded">10</p>
+            </div>
+          </div>
+        </div>
+        <div class="haircut-gift flex"><img src="assets/PinGift.svg" alt=""></div>
+      </section>
+
+      <section class="history flex">
+
+        <div class="history-head flex">
+          <h2>histórico</h2>
+          <p id="history-cuts">7 cortes</p>
+        </div>
+
+        <div class="history-wrapper flex">
+        
+          <div class="history-dates flex">
+            <div class="dates flex">
+              <h2>29/04/2024</h2>
+              <p>18:30</p>
+            </div>
+            <div class="history-check flex"><img src="assets/PinCheckGreen.svg" alt=""></div>
+          </div>
+
+          <div class="history-dates flex">
+            <div class="dates flex">
+              <h2 id="appointment-history-date">29/04/2024</h2>
+              <p>18:30</p>
+            </div>
+            <div class="history-check flex"><img src="assets/PinCheckGreen.svg" alt=""></div>
+          </div>
+        
+        </div>
+
+        
+  
+      </section>
+        
+
+
+    </div>
+
+    
+
+  </main>
+
+ 
+</body>
+</html>

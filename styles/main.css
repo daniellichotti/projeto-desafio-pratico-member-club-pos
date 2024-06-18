@@ -1,0 +1,39 @@
+.sections {
+  width: 351px;
+  height: 882px;
+
+  margin-top: 20px;
+
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 8px;
+
+  
+
+  
+}
+
+@media (width >= 80em){
+  .sections{
+    width: 912px;
+    height: 466px;
+
+    margin-top: 64px;
+
+    align-items: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-rows: 100px 500px;
+    grid-template-columns: 400px 1fr;
+    grid-template-areas: 
+    "A B"
+    "C D";
+    
+
+    
+    }
+}
+

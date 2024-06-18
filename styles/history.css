@@ -1,0 +1,99 @@
+.history {
+  width: 351px;
+  height: 441px;
+  grid-area: C;
+
+  border: 1px solid var(--gray-300);
+  background-color: var(--gray-100);
+  border-radius: 16px;
+  padding: 20px;
+
+  align-items: start;
+  justify-content: flex-start;
+  gap: 16px;
+  
+
+  .history-head{
+    width: 311px;
+    height: 17px;
+
+    margin-bottom: 16px;
+    
+    justify-content: space-between;
+    flex-direction: row;
+
+    h2 {
+      font: var(--subtitle-sm);
+      color: var(--gray-500);
+      text-transform: uppercase;
+    }
+
+    p {
+      font: var(--text-xs);
+      color: var(--gray-500);
+    }
+  }
+
+  .history-wrapper {
+    width: 311px;
+    height: 364px;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 12px;
+
+    align-items: start;
+    justify-content: flex-start;
+    gap: 12px;
+
+    .history-dates {
+      width: 311px;
+      height: 40px;
+
+      justify-content: space-between;
+      flex-direction: row;
+
+      .dates {
+        align-items: start;
+
+        h2 {
+        font: var(--subtitle-sm);
+        color: var(--gray-600);
+        }
+    
+        p {
+          font: var(--text-xs);
+          color: var(--gray-500);
+          }
+      }
+    }
+
+  }
+  
+}
+
+@media (width >= 80em){
+  .history{
+    width: 320px;
+    height: 360px;
+
+    padding: 28px 28px 24px 24px;
+
+    .history-head{
+      width: 268px;
+      height: 17px;
+    }
+
+    .history-wrapper {
+      .history-dates {
+        width: 268px;
+      
+        .history-dates {
+          width: 268px;
+        }
+      }
+    }
+      
+    
+
+  }
+}
+
